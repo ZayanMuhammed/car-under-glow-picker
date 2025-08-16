@@ -1,4 +1,4 @@
-```markdown
+
 # 🚗 Car Underglow Color Picker ✨
 
 An interactive web app that lets you customize a car with **dynamic underglow lighting effects**.  
