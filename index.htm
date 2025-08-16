@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Underglow Color Picker</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <center>
+    <br /><br />
+    <h1>Car Underglow color picker</h1>
+    <br /><br />
+    <div class="car-wrap">
+      <img id="car" src="assets/car.png" alt="Car" />
+      <div id="underglow"></div>
+    </div>
+  </center>
+  <center>
+    <h1 class="Sliders">Sliders</h1>
+    <div class="card">
+      <div class="card__content"><br /><br />
+        <div class="sliders-class">
+          <!-- width -->
+          <label class="slider">
+            <input type="range" class="level" id="width" min="100" max="1000" value="550" />
+            <svg class="volume" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+              fill="#FFFFFF">
+              <path
+                d="M280-280 80-480l200-200 56 56-103 104h494L624-624l56-56 200 200-200 200-56-56 103-104H233l103 104-56 56Z" />
+            </svg>
+          </label><br /><br /><br />
+
+          <!-- Height -->
+          <label class="slider">
+            <input type="range" class="level" id="height" min="100" max="800" value="300" />
+            <svg class="volume" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+              fill="#FFFFFF">
+              <path
+                d="M480-120 320-280l56-56 64 63v-414l-64 63-56-56 160-160 160 160-56 57-64-64v414l64-63 56 56-160 160Z" />
+            </svg>
+          </label><br /><br /><br />
+
+          <!-- rotate -->
+          <label class="slider">
+            <input type="range" class="level" id="rotate" min="0" max="360" value="0" />
+            <svg class="volume" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+              fill="#FFFFFF">
+              <path
+                d="M440-80q-50-5-96-24.5T256-156l56-58q29 21 61.5 34t66.5 18v82Zm80 0v-82q104-15 172-93.5T760-438q0-117-81.5-198.5T480-718h-8l64 64-56 56-160-160 160-160 56 58-62 62h6q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-438q0 137-91 238.5T520-80ZM198-214q-32-42-51.5-88T122-398h82q5 34 18 66.5t34 61.5l-58 56Zm-76-264q6-51 25-98t51-86l58 56q-21 29-34 61.5T204-478h-82Z" />
+            </svg>
+          </label><br /><br /><br />
+        </div>
+      </div>
+    </div>
+    <h1>Colors</h1><br /><br />
+  </center>
+
+  <div class="cards">
+    <!--green-->
+    <div id="green"
+      class="relative group duration-500 cursor-pointer group overflow-hidden relative text-gray-50 h-72 w-56  rounded-2xl hover:duration-700 duration-700">
+      <div class="w-56 h-72 bg-lime-400 text-gray-800">
+        <div class="flex flex-row justify-between">
+          <svg class="fill-current stroke-current w-8 h-8 p-2 hover:bg-lime-200  rounded-full m-1" height="100"
+            preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0"
+            xmlns="http://www.w3.org/2000/svg" y="0">
+            <path class=""
+              d="M15.8,32.9V15.8m0,0H32.9m-17.1,0L37.2,37.2m47-4.3V15.8m0,0H67.1m17.1,0L62.8,37.2m-47,29.9V84.2m0,0H32.9m-17.1,0L37.2,62.8m47,21.4L62.8,62.8M84.2,84.2V67.1m0,17.1H67.1"
+              fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+          </svg>
+          <svg class="fill-current stroke-current w-8 h-8 p-2 m-1 hover:bg-lime-200 rounded-full" height="100"
+            preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0"
+            xmlns="http://www.w3.org/2000/svg" y="0">
+            <path class="svg-stroke-primary"
+              d="M50,17.4h0M50,50h0m0,32.6h0M50,22a4.7,4.7,0,1,1,4.7-4.6A4.7,4.7,0,0,1,50,22Zm0,32.7A4.7,4.7,0,1,1,54.7,50,4.7,4.7,0,0,1,50,54.7Zm0,32.6a4.7,4.7,0,1,1,4.7-4.7A4.7,4.7,0,0,1,50,87.3Z"
+              fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="absolute bg-gray-50 -bottom-24 w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+        <span class="text-lime-400 font-bold text-xs">Underglow</span>
+        <span class="text-gray-800 font-bold text-3xl">Green</span>
+        <p class="text-neutral-800">Green underglow is fresh, vibrant, unique, and generally legal.</p>
+      </div>
+    </div>
+
+    <!-- red -->
+    <div id="red"
+      class="relative group duration-500 cursor-pointer group overflow-hidden relative text-gray-50 h-72 w-56  rounded-2xl hover:duration-700 duration-700">
+      <div class="w-56 h-72 bg-red-400 text-gray-800">
+        <div class="flex flex-row justify-between">
+          <svg class="fill-current stroke-current w-8 h-8 p-2 hover:bg-lime-200  rounded-full m-1" height="100"
+            preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0"
+            xmlns="http://www.w3.org/2000/svg" y="0">
+            <path class=""
+              d="M15.8,32.9V15.8m0,0H32.9m-17.1,0L37.2,37.2m47-4.3V15.8m0,0H67.1m17.1,0L62.8,37.2m-47,29.9V84.2m0,0H32.9m-17.1,0L37.2,62.8m47,21.4L62.8,62.8M84.2,84.2V67.1m0,17.1H67.1"
+              fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+          </svg>
+          <svg class="fill-current stroke-current w-8 h-8 p-2 m-1 hover:bg-lime-200 rounded-full" height="100"
+            preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0"
+            xmlns="http://www.w3.org/2000/svg" y="0">
+            <path class="svg-stroke-primary"
+              d="M50,17.4h0M50,50h0m0,32.6h0M50,22a4.7,4.7,0,1,1,4.7-4.6A4.7,4.7,0,0,1,50,22Zm0,32.7A4.7,4.7,0,1,1,54.7,50,4.7,4.7,0,0,1,50,54.7Zm0,32.6a4.7,4.7,0,1,1,4.7-4.7A4.7,4.7,0,0,1,50,87.3Z"
+              fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="absolute bg-gray-50 -bottom-24 w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+        <span class="text-red-400 font-bold text-xs">Underglow</span>
+        <span class="text-gray-800 font-bold text-3xl">Red</span>
+        <p class="text-neutral-800">Red underglow is bold, aggressive, striking, but usually illegal.</p>
+      </div>
+    </div>
+
+    <!-- yellow -->
+    <div id="yellow"
+      class="relative group duration-500 cursor-pointer group overflow-hidden relative text-gray-50 h-72 w-56  rounded-2xl hover:duration-700 duration-700">
+      <div class="w-56 h-72 bg-yellow-400 text-gray-800">
+        <div class="flex flex-row justify-between">
+          <svg class="fill-current stroke-current w-8 h-8 p-2 hover:bg-lime-200  rounded-full m-1" height="100"
+            preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0"
+            xmlns="http://www.w3.org/2000/svg" y="0">
+            <path class=""
+              d="M15.8,32.9V15.8m0,0H32.9m-17.1,0L37.2,37.2m47-4.3V15.8m0,0H67.1m17.1,0L62.8,37.2m-47,29.9V84.2m0,0H32.9m-17.1,0L37.2,62.8m47,21.4L62.8,62.8M84.2,84.2V67.1m0,17.1H67.1"
+              fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+          </svg>
+          <svg class="fill-current stroke-current w-8 h-8 p-2 m-1 hover:bg-lime-200 rounded-full" height="100"
+            preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0"
+            xmlns="http://www.w3.org/2000/svg" y="0">
+            <path class="svg-stroke-primary"
+              d="M50,17.4h0M50,50h0m0,32.6h0M50,22a4.7,4.7,0,1,1,4.7-4.6A4.7,4.7,0,0,1,50,22Zm0,32.7A4.7,4.7,0,1,1,54.7,50,4.7,4.7,0,0,1,50,54.7Zm0,32.6a4.7,4.7,0,1,1,4.7-4.7A4.7,4.7,0,0,1,50,87.3Z"
+              fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="absolute bg-gray-50 -bottom-24 w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+        <span class="text-yellow-400 font-bold text-xs">Underglow</span>
+        <span class="text-gray-800 font-bold text-3xl">Yellow</span>
+        <p class="text-neutral-800">Yellow underglow is bright, warm, visible, stylish, and legal.</p>
+      </div>
+    </div>
+
+    <!-- blue -->
+    <div id="blue"
+      class="relative group duration-500 cursor-pointer group overflow-hidden relative text-gray-50 h-72 w-56  rounded-2xl hover:duration-700 duration-700">
+      <div class="w-56 h-72 bg-blue-400 text-gray-800">
+        <div class="flex flex-row justify-between">
+          <svg class="fill-current stroke-current w-8 h-8 p-2 hover:bg-lime-200  rounded-full m-1" height="100"
+            preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0"
+            xmlns="http://www.w3.org/2000/svg" y="0">
+            <path class=""
+              d="M15.8,32.9V15.8m0,0H32.9m-17.1,0L37.2,37.2m47-4.3V15.8m0,0H67.1m17.1,0L62.8,37.2m-47,29.9V84.2m0,0H32.9m-17.1,0L37.2,62.8m47,21.4L62.8,62.8M84.2,84.2V67.1m0,17.1H67.1"
+              fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+          </svg>
+          <svg class="fill-current stroke-current w-8 h-8 p-2 m-1 hover:bg-lime-200 rounded-full" height="100"
+            preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0"
+            xmlns="http://www.w3.org/2000/svg" y="0">
+            <path class="svg-stroke-primary"
+              d="M50,17.4h0M50,50h0m0,32.6h0M50,22a4.7,4.7,0,1,1,4.7-4.6A4.7,4.7,0,0,1,50,22Zm0,32.7A4.7,4.7,0,1,1,54.7,50,4.7,4.7,0,0,1,50,54.7Zm0,32.6a4.7,4.7,0,1,1,4.7-4.7A4.7,4.7,0,0,1,50,87.3Z"
+              fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="absolute bg-gray-50 -bottom-24 w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+        <span class="text-blue-400 font-bold text-xs">Underglow</span>
+        <span class="text-gray-800 font-bold text-3xl">Blue</span>
+        <p class="text-neutral-800">Blue underglow is cool, modern, eye-catching, but often illegal.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
